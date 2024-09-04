@@ -1,26 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>App.vue</h1>
+  <p>The component has two div tags with one slot in each.</p>
+  <slot-comp2>
+    <template v-slot:bottomSlot2>
+      <h4>To the bottom slot!</h4>
+      <p>This p tag and the h4 tag above are directed to the bottom slot with the v-slot directive used on the template tag.</p>
+    </template>
+    <p>This goes into the default slot</p>
+  </slot-comp2>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+<script></script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  #app {
+    width: 300px;
+  }
+</style>   
